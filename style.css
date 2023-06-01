@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    color: rgb(83, 79, 79);
+}
+
+.form {
+    background-color: rgb(217, 234, 218);
+    width: 520px;
+    height: auto;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 40vh auto;
+    border: 3px solid rgb(189, 85, 85);
+    border-bottom-right-radius: 3em;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.input {
+    width: 5em;
+    height: 3em;
+    margin: 5%;
+    display: inline-block;
+    text-align: center;
+    padding: 2em;
+}
+
+.title {
+    font-size: 1.5em;
+
+ letter-spacing: 0.5px;
+ word-spacing: 2.7px;
+}
+
+input[type=text] {
+    width: 140px;
+ margin: auto;
+ outline: none;
+ border: 2px solid rgb(175, 95, 95);
+ padding: 12px;
+ background-color: #f7f7f7;
+ border-radius: 2px;
+ color: rgb(205, 135, 135);
+ font-size:  2em;
+ 
+}
+
+.button {
+    margin: 50px 50px;
+}
+
+.button > button {
+    width: 95px;
+    height: 50px;
+    text-transform: uppercase;
+    color: rgb(175, 95, 95);
+    background-color: transparent;
+    border: 3px solid transparent;
+    font-weight: 900;
+    font-size: medium;
+
+}
+
+.button > button:hover {
+    border: 3px solid brown;
+}
+
+.age-output{
+    display: block;
+    font-weight: normal;
+    margin: auto 50px;
+    color: indianred;
+    font-size: xx-large;
+    margin-top: -50px;
+}

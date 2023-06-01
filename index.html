@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <h1>Suprise Me!</h1>
+        <div class="input">
+            <p class="title">Date</p>
+            <input type="text" name="date" id="date" placeholder="dd" required="required" minlength="1" maxlength="2" />
+
+        </div>
+        <div class="input">
+            <p class="title">Month</p>
+    <input type="text" name="month" id="month" placeholder="mm" required="required" minlength="1" maxlength="2" />
+
+        </div>
+        <div class="input">
+            <p class="title">Year</p>
+    <input type="text" name="year" id="year" placeholder="yyyy" required="required" minlength="4" maxlength="4" />
+
+        </div>
+
+        <div class="button">
+            <button type="submit" onclick="calc()">Submit</button>
+        </div>
+
+        <div class="age-output">
+            <div class="output-year"><span id="agevalue">- -</span>years</div>
+            <div class="output-year"><span id="monthvalue">- -</span>months</div>
+            <div class="output-year"><span id="dayvalue">- -</span>days</div>
+        </div>
+    </div>
+
+    <script>
+        function calc() {
+            var userday = document.getElementById('date').value;
+            var usermonth = document.getElementById('month').value;
+            var useryear = document.getElementById('year').value;
+
+            var todaysdate = new Date();
+            var day = todaysdate.getDate();
+            var month = todaysdate.getMonth() + 1; // Add 1 to get the current month index
+            var year = todaysdate.getFullYear();
+
+            var totalMonths = (year - useryear) * 12; // Calculate the total months by multiplying the year difference by 12
+            totalMonths -= month; // Subtract the current month
+            totalMonths += parseInt(usermonth); // Add the user's input month
+
+            var age = Math.floor(totalMonths / 12); // Calculate the age in years
+            var months = totalMonths % 12; // Calculate the remaining months
+            var days = day - userday;
+            document.getElementById('agevalue').innerText = age;
+            document.getElementById('monthvalue').innerText = months;
+            document.getElementById('dayvalue').innerText = Math.abs(days);
+        }
+    </script>
+</body>
+</html>
